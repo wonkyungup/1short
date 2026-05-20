@@ -1,0 +1,62 @@
+================================================================
+1Short — Chrome Web Store Submission
+================================================================
+
+----------------------------------------------------------------
+설명 (Description)
+----------------------------------------------------------------
+1Short: Auto-Scroll for YouTube Shorts & TikTok
+
+1Short is a lightweight browser extension that automatically advances to the next video on YouTube Shorts and TikTok the moment the current one ends — no timers, no fixed delays. It detects video completion through native playback events for a seamless, natural scrolling experience.
+
+For YouTube Shorts, 1Short also includes an optional Ad Skip feature that automatically detects and skips sponsored videos by identifying ad-specific elements in the page's DOM structure, so you can browse without interruptions.
+
+The extension adds a simple toggle to your browser toolbar. Enable it once and it works silently in the background — no configuration required.
+
+Key Features:
+- Auto Scroll — Moves to the next video the instant the current one ends, using playback event detection (not a fixed timer)
+- Ad Skip (YouTube Shorts only) — Automatically skips sponsored videos detected via DOM structure
+- Minimal UI — A clean popup with a single toggle per feature; no clutter
+- State persistence — Your toggle settings are remembered within the tab session
+- Sound bleed prevention — Mutes the outgoing video before transitioning
+- Platform-aware — Ad Skip option only appears on YouTube Shorts; TikTok shows only the Auto Scroll toggle
+
+Privacy: 1Short does not collect, store, or transmit any personal data. All operations run locally within your browser tab.
+
+----------------------------------------------------------------
+전용 목적 설명 (Single Purpose Description)
+----------------------------------------------------------------
+1Short has a single purpose: to automatically scroll to the
+next video on YouTube Shorts and TikTok when the current video
+ends. The optional Ad Skip feature is a direct extension of
+this purpose — skipping sponsored content that the user does
+not wish to watch. No data is read beyond what is needed to
+detect video end and ad state within the current tab.
+
+----------------------------------------------------------------
+tabs 사용 근거
+----------------------------------------------------------------
+The tabs permission is used to retrieve the URL and ID of the
+currently active tab. This is required to detect which platform
+the user is on (YouTube Shorts or TikTok) and to send messages
+to the content script via chrome.tabs.sendMessage(). No
+browsing history or background tab data is accessed.
+
+----------------------------------------------------------------
+scripting 사용 근거
+----------------------------------------------------------------
+The scripting permission is declared for potential future use.
+It is not actively used in the current version.
+
+----------------------------------------------------------------
+호스트 권한 사용 근거
+----------------------------------------------------------------
+Host permissions for youtube.com and tiktok.com are required
+to inject the content script into these pages. The content
+script listens to video playback events and reads DOM structure
+to detect video end and sponsored content. It does not read
+cookies, form data, or any user input, and does not transmit
+any data externally.
+
+Permissions are scoped to the minimum required domains only.
+================================================================

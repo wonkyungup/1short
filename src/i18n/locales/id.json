@@ -1,0 +1,9 @@
+{
+  "translation": {
+    "label_auto_scroll": "Gulir Otomatis",
+    "label_auto_scroll_desc": "Otomatis pindah ke video berikutnya saat video berakhir",
+    "msg_not_supported": "Halaman ini tidak didukung",
+    "label_ad_skip": "Lewati Iklan",
+    "label_ad_skip_desc": "Otomatis lewati video sponsor"
+  }
+}

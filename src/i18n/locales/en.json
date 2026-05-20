@@ -1,0 +1,9 @@
+{
+  "translation": {
+    "label_auto_scroll": "Auto Scroll",
+    "label_auto_scroll_desc": "Automatically go to the next video when it ends",
+    "msg_not_supported": "Not supported on this page",
+    "label_ad_skip": "Ad Skip",
+    "label_ad_skip_desc": "Auto-skip sponsored videos"
+  }
+}

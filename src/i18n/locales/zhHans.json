@@ -1,0 +1,9 @@
+{
+  "translation": {
+    "label_auto_scroll": "自动滚动",
+    "label_auto_scroll_desc": "视频结束后自动切换到下一个视频",
+    "msg_not_supported": "该页面不支持",
+    "label_ad_skip": "跳过广告",
+    "label_ad_skip_desc": "自动跳过赞助视频"
+  }
+}

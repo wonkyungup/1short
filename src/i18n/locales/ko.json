@@ -1,0 +1,9 @@
+{
+  "translation": {
+    "label_auto_scroll": "자동 넘김",
+    "label_auto_scroll_desc": "영상이 끝나면 자동으로 다음 영상으로 넘깁니다",
+    "msg_not_supported": "지원하지 않는 페이지입니다",
+    "label_ad_skip": "광고 스킵",
+    "label_ad_skip_desc": "스폰서 영상을 자동으로 건너뜁니다"
+  }
+}

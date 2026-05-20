@@ -1,0 +1,9 @@
+{
+  "translation": {
+    "label_auto_scroll": "Automatisch weiterblättern",
+    "label_auto_scroll_desc": "Wechselt automatisch zum nächsten Video, wenn es endet",
+    "msg_not_supported": "Diese Seite wird nicht unterstützt",
+    "label_ad_skip": "Werbung überspringen",
+    "label_ad_skip_desc": "Gesponserte Videos automatisch überspringen"
+  }
+}
