@@ -27,9 +27,6 @@
 **Auto Scroll**
 Listens to the video's `timeupdate` event. When the playback position resets near the end (loop detection) or `ended` fires, it triggers navigation to the next video — no polling, no fixed interval.
 
-**Ad Skip**
-Polls the DOM every 800ms for YouTube ad-specific elements (`reels-ad-metadata-view-model`, `ad-avatar-view-model`, `ad-badge-view-model`). These are stable custom element tag names tied to YouTube's ad rendering pipeline.
-
 ---
 
 ### Permissions
