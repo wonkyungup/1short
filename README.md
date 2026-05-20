@@ -10,7 +10,6 @@
 
 - **Auto Scroll** — Automatically moves to the next video the moment the current one ends, with no fixed timer
 - **Ad Skip** — Detects sponsored videos via DOM structure and skips them instantly
-- **State persistence** — Toggle state is preserved when the popup is closed and reopened
 
 ---
 
