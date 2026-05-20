@@ -4,6 +4,7 @@
     "label_auto_scroll_desc": "影片結束後自動切換到下一部影片",
     "msg_not_supported": "此頁面不支援",
     "label_ad_skip": "跳過廣告",
-    "label_ad_skip_desc": "自動跳過贊助影片"
+    "label_ad_skip_desc": "自動跳過贊助影片",
+    "msg_ad_skip_notice": "廣告偵測基於 YouTube 的頁面結構"
   }
 }

@@ -9,9 +9,7 @@
 ### Features
 
 - **Auto Scroll** — Automatically moves to the next video the moment the current one ends, with no fixed timer
-- **Ad Skip** *(YouTube Shorts only)* — Detects sponsored videos via DOM structure and skips them instantly
-- **State persistence** — Toggle state is preserved when the popup is closed and reopened
-- **Sound bleed prevention** — Mutes the current video before transitioning to the next
+- **Ad Skip** — Detects sponsored videos via DOM structure and skips them instantly
 
 ---
 
@@ -28,9 +26,6 @@
 
 **Auto Scroll**
 Listens to the video's `timeupdate` event. When the playback position resets near the end (loop detection) or `ended` fires, it triggers navigation to the next video — no polling, no fixed interval.
-
-**Ad Skip**
-Polls the DOM every 800ms for YouTube ad-specific elements (`reels-ad-metadata-view-model`, `ad-avatar-view-model`, `ad-badge-view-model`). These are stable custom element tag names tied to YouTube's ad rendering pipeline.
 
 ---
 

@@ -4,6 +4,7 @@
     "label_auto_scroll_desc": "Wechselt automatisch zum nächsten Video, wenn es endet",
     "msg_not_supported": "Diese Seite wird nicht unterstützt",
     "label_ad_skip": "Werbung überspringen",
-    "label_ad_skip_desc": "Gesponserte Videos automatisch überspringen"
+    "label_ad_skip_desc": "Gesponserte Videos automatisch überspringen",
+    "msg_ad_skip_notice": "Die Anzeigenerkennung basiert auf der Seitenstruktur von YouTube"
   }
 }

@@ -135,6 +135,9 @@ const App = () => {
               }} />
             </div>
           </div>
+          <div style={{ fontSize: 10, color: '#999', marginTop: 6, lineHeight: '14px' }}>
+            {t('msg_ad_skip_notice')}
+          </div>
         </>
       )}
     </div>

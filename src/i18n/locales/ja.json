@@ -4,6 +4,7 @@
     "label_auto_scroll_desc": "動画が終わると自動的に次の動画へ移動します",
     "msg_not_supported": "このページには対応していません",
     "label_ad_skip": "広告スキップ",
-    "label_ad_skip_desc": "スポンサー動画を自動スキップ"
+    "label_ad_skip_desc": "スポンサー動画を自動スキップ",
+    "msg_ad_skip_notice": "広告検出はYouTubeのページ構造に基づいています"
   }
 }

@@ -15,11 +15,11 @@ function detectPlatform(): 'youtube-shorts' | 'tiktok' | null {
 }
 
 function isYouTubeAd(): boolean {
-  return (
-    document.querySelector('reels-ad-metadata-view-model') !== null ||
-    document.querySelector('ad-avatar-view-model') !== null ||
-    document.querySelector('ad-badge-view-model') !== null
-  );
+  const els = [
+    document.querySelector('reels-ad-metadata-view-model'),
+    document.querySelector('ad-badge-view-model'),
+  ];
+  return els.some((el) => el !== null && el.closest('[aria-hidden="true"]') === null);
 }
 
 function goNext() {
@@ -100,8 +100,12 @@ function attach() {
 function startAdCheck() {
   if (adCheckTimer !== null) return;
   adCheckTimer = setInterval(() => {
-    if (!adSkip || detectPlatform() !== 'youtube-shorts') return;
-    if (isYouTubeAd()) goNext();
+    if (!adSkip || detectPlatform() !== 'youtube-shorts' || goingNext) return;
+    if (isYouTubeAd()) {
+      goingNext = true;
+      goNext();
+      setTimeout(() => { goingNext = false; attach(); }, 1500);
+    }
   }, 800);
 }
 
@@ -111,15 +115,26 @@ function stopAdCheck() {
   adCheckTimer = null;
 }
 
+function applySettings(nextEnabled: boolean, nextAdSkip: boolean) {
+  enabled = nextEnabled;
+  adSkip = nextAdSkip;
+  chrome.storage.session.set({ enabled, adSkip });
+  if (adSkip && detectPlatform() === 'youtube-shorts') {
+    startAdCheck();
+  } else {
+    stopAdCheck();
+  }
+}
+
+chrome.storage.session.get(['enabled', 'adSkip']).then((result) => {
+  enabled = (result['enabled'] as boolean) ?? false;
+  adSkip = (result['adSkip'] as boolean) ?? false;
+  if (adSkip && detectPlatform() === 'youtube-shorts') startAdCheck();
+});
+
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message.type === 'UPDATE_SETTINGS') {
-    enabled = message.enabled as boolean;
-    adSkip = (message.adSkip as boolean) ?? adSkip;
-    if (adSkip && detectPlatform() === 'youtube-shorts') {
-      startAdCheck();
-    } else {
-      stopAdCheck();
-    }
+    applySettings(message.enabled as boolean, (message.adSkip as boolean) ?? adSkip);
     sendResponse({ ok: true });
   } else if (message.type === 'GET_STATE') {
     sendResponse({ enabled, adSkip });

@@ -4,6 +4,7 @@
     "label_auto_scroll_desc": "Automatically go to the next video when it ends",
     "msg_not_supported": "Not supported on this page",
     "label_ad_skip": "Ad Skip",
-    "label_ad_skip_desc": "Auto-skip sponsored videos"
+    "label_ad_skip_desc": "Auto-skip sponsored videos",
+    "msg_ad_skip_notice": "Ad detection is based on YouTube's page structure"
   }
 }

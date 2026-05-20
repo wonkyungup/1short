@@ -4,6 +4,7 @@
     "label_auto_scroll_desc": "영상이 끝나면 자동으로 다음 영상으로 넘깁니다",
     "msg_not_supported": "지원하지 않는 페이지입니다",
     "label_ad_skip": "광고 스킵",
-    "label_ad_skip_desc": "스폰서 영상을 자동으로 건너뜁니다"
+    "label_ad_skip_desc": "스폰서 영상을 자동으로 건너뜁니다",
+    "msg_ad_skip_notice": "광고 감지는 YouTube의 페이지 구조를 기반으로 합니다"
   }
 }
