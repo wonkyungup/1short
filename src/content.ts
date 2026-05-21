@@ -5,6 +5,7 @@ let goingNext = false;
 let attachedAt = 0;
 let prevTime = 0;
 let adCheckTimer: ReturnType<typeof setInterval> | null = null;
+let lastAdSkipTime = 0;
 
 function detectPlatform(): 'youtube-shorts' | 'tiktok' | null {
   const host = location.hostname;
@@ -102,6 +103,9 @@ function startAdCheck() {
   adCheckTimer = setInterval(() => {
     if (!adSkip || detectPlatform() !== 'youtube-shorts' || goingNext) return;
     if (isYouTubeAd()) {
+      const now = Date.now();
+      if (now - lastAdSkipTime < 3000) return;
+      lastAdSkipTime = now;
       goingNext = true;
       goNext();
       setTimeout(() => { goingNext = false; attach(); }, 1500);
