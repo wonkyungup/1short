@@ -1,10 +1,14 @@
 <div align="center">
-  <img width="80" alt="1Short" src="">
+  <img width="80" alt="1Short" src="./docs/icon.png">
   <h1>1Short</h1>
   <p>A Chrome extension that automatically scrolls through YouTube Shorts and TikTok videos.</p>
 </div>
 
 ---
+
+<div align="center">
+ <img alt="1Short" src="./docs/1280x800.png">
+</div>
 
 ### Features
 
