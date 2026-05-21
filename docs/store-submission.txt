@@ -17,8 +17,6 @@ Key Features:
 - Auto Scroll — Moves to the next video the instant the current one ends, using playback event detection (not a fixed timer)
 - Ad Skip (YouTube Shorts only) — Automatically skips sponsored videos detected via DOM structure
 - Minimal UI — A clean popup with a single toggle per feature; no clutter
-- State persistence — Your toggle settings are remembered within the tab session
-- Sound bleed prevention — Mutes the outgoing video before transitioning
 - Platform-aware — Ad Skip option only appears on YouTube Shorts; TikTok shows only the Auto Scroll toggle
 
 Privacy: 1Short does not collect, store, or transmit any personal data. All operations run locally within your browser tab.
