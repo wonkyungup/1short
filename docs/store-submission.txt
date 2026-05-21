@@ -43,10 +43,15 @@ to the content script via chrome.tabs.sendMessage(). No
 browsing history or background tab data is accessed.
 
 ----------------------------------------------------------------
-scripting 사용 근거
+storage 사용 근거
 ----------------------------------------------------------------
-The scripting permission is declared for potential future use.
-It is not actively used in the current version.
+The storage permission is used to persist the enabled/disabled
+toggle state within the browser session via
+chrome.storage.session. This allows the popup and the content
+script to share state without requiring the user to re-enable
+the extension after closing and reopening the popup. Session
+storage is cleared automatically when the browser session ends
+and is never written to disk or transmitted externally.
 
 ----------------------------------------------------------------
 호스트 권한 사용 근거

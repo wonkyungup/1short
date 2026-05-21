@@ -18,15 +18,16 @@ The extension operates entirely within the current browser tab:
 
 - It listens to video playback events (`timeupdate`, `ended`) to detect when a video finishes
 - It inspects DOM elements to detect sponsored content on YouTube Shorts
-- It communicates toggle state between the popup and the content script via `chrome.tabs.sendMessage` — this state is held in memory only and is never persisted
+- It communicates toggle state between the popup and the content script via `chrome.tabs.sendMessage`
+- It persists toggle state within the tab session using `chrome.storage.session`
 
 ---
 
 ## Where Data Is Stored
 
-**No data is stored.** The enabled/disabled toggle state is held in memory within the content script for the lifetime of the tab session.
+The enabled/disabled toggle state is stored in `chrome.storage.session` for the lifetime of the browser session.
 
-- No data is written to `chrome.storage.local` or any other storage
+- `chrome.storage.session` data is cleared automatically when the browser session ends — it is never written to disk or retained across restarts
 - No data is transmitted to any external server
 - No data is shared with third parties
 - No analytics or tracking of any kind is performed
@@ -38,7 +39,7 @@ The extension operates entirely within the current browser tab:
 | Permission | Reason |
 |------------|--------|
 | `tabs` | Read the URL and ID of the active tab to detect the current platform (YouTube Shorts or TikTok) |
-| `scripting` | Reserved for future use |
+| `storage` | Persist toggle state within the browser session using `chrome.storage.session` |
 | `host_permissions: youtube.com, tiktok.com` | Inject the content script into supported platforms only |
 
 ---
