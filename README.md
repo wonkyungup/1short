@@ -10,6 +10,9 @@
  <img alt="1Short" src="./docs/1280x800.png">
 </div>
 
+<br />
+<a href="https://chromewebstore.google.com/detail/1short/ldahhmalllpaiiemmegbppkbekomodin">Chrome Web Store</a>
+
 ### Features
 
 - **Auto Scroll** — Automatically moves to the next video the moment the current one ends, with no fixed timer
