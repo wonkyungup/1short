@@ -1,6 +1,6 @@
 {
   "name": "1short",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Auto scroll YouTube Shorts, TikTok Reels.",
   "private": true,
   "scripts": {

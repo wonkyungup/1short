@@ -15,12 +15,24 @@ function detectPlatform(): 'youtube-shorts' | 'tiktok' | null {
   return null;
 }
 
+function isElementVisible(el: Element): boolean {
+  const rect = el.getBoundingClientRect();
+  if (rect.width === 0 && rect.height === 0) return false;
+  const style = window.getComputedStyle(el);
+  return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
+}
+
 function isYouTubeAd(): boolean {
   const els = [
     document.querySelector('reels-ad-metadata-view-model'),
     document.querySelector('ad-badge-view-model'),
   ];
-  return els.some((el) => el !== null && el.closest('[aria-hidden="true"]') === null);
+  return els.some(
+    (el) =>
+      el !== null &&
+      el.closest('[aria-hidden="true"]') === null &&
+      isElementVisible(el),
+  );
 }
 
 function goNext() {
