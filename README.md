@@ -12,6 +12,8 @@
 
 <br />
 <a href="https://chromewebstore.google.com/detail/1short/ldahhmalllpaiiemmegbppkbekomodin">Chrome Web Store</a>
+<br />
+<a href="https://microsoftedge.microsoft.com/addons/detail/1short/ldihgejhinmnnlnhnpckbcemdaojmapj">Edge Web Store</a>
 
 ### Features
 
